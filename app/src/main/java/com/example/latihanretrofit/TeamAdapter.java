@@ -35,6 +35,7 @@ public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.TeamViewHolder
     public void onBindViewHolder(@NonNull TeamViewHolder holder, int position) {
         Team team = teamList.get(position);
         holder.teamName.setText(team.getStrTeam());
+        holder.teamStadium.setText(team.getStrStadium());
         Glide.with(context).load(team.getStrTeamBadge()).into(holder.teamBadge);
     }
 
@@ -45,11 +46,13 @@ public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.TeamViewHolder
 
     public static class TeamViewHolder extends RecyclerView.ViewHolder {
         TextView teamName;
+        TextView teamStadium;
         ImageView teamBadge;
 
         public TeamViewHolder(@NonNull View itemView) {
             super(itemView);
             teamName = itemView.findViewById(R.id.team_name);
+            teamStadium = itemView.findViewById(R.id.team_stadium);
             teamBadge = itemView.findViewById(R.id.team_badge);
         }
     }

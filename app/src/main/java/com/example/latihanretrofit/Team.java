@@ -5,6 +5,16 @@ public class Team {
     private String strTeam;
     private String strTeamBadge;
 
+    public String getStrStadium() {
+        return strStadium;
+    }
+
+    public void setStrStadium(String strStadium) {
+        this.strStadium = strStadium;
+    }
+
+    private String strStadium;
+
     public String getIdTeam() {
         return idTeam;
     }
